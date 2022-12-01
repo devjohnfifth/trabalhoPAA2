@@ -1,0 +1,5 @@
+2
+30 -10 20
+50 10 30
+
+Impacto superior
