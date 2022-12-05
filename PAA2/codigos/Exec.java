@@ -7,6 +7,7 @@ import java.util.List;
 
 public class Exec{   
     private static List<Poligno> polygonList;
+    private static String caminho = "C:\\Users\\joaol\\Desktop\\PAA\\PAA2\\exemplos\\";
     public static void main(String[] args) throws FileNotFoundException{
         escolhaExercicio();
     }
@@ -37,15 +38,19 @@ public class Exec{
 
     public static void exercicio1() throws FileNotFoundException{
         System.out.println("=================================================Começa criação da lista de Polignos=================================================");
-        Poligno polignos[] = leitura("test11.txt");
+        Poligno polignos[] = leitura("test2.txt");
         System.out.println("=====================================================================================================================================");
         System.out.println("exércicio 1: " + Calculadora.distanciaMinimaTopo(polignos[0], polignos[1]));
         
     }
 
     public static void exercicio2() throws FileNotFoundException{
-        leitura2("testA.txt");
+        System.out.println("=================================================Começa criação da lista de Polignos=================================================");
+        leitura2("test2.txt");
+        System.out.println("=====================================================================================================================================");
+        System.out.println("\n\n\n=================================================Começa Artista=================================================");
         new Artista("Exercise 02", polygonList);
+        
 
     }
 
@@ -54,7 +59,8 @@ public class Exec{
 
 
     public static Poligno[] leitura(String arquivo)throws FileNotFoundException{
-        String pasta = "/home/joao/Área de Trabalho/github/PAA2/exemplos/"+arquivo;
+        // String pasta = "/home/joao/Área de Trabalho/github/PAA2/exemplos/"+arquivo;
+        String pasta = caminho+arquivo;
         Scanner scanner = new Scanner(new FileReader(pasta)).useDelimiter("\\n");
     
         int tamanhoListaPolignos = scanner.nextInt();
@@ -82,13 +88,15 @@ public class Exec{
         return polignos;
     }
 
-    private static void leitura2 (String fileName) {
+    private static void leitura2 (String arquivo) {
         polygonList = new ArrayList<Poligno>();
-        String path =  "/home/joao/Área de Trabalho/github/PAA2/exemplos/" + fileName;
+        // String pasta =  "/home/joao/Área de Trabalho/github/PAA2/exemplos/" + arquivo;
+        String pasta = caminho+arquivo;
         try {
-            Scanner sc = new Scanner(new FileReader(path));
+            Scanner sc = new Scanner(new FileReader(pasta));
             int numberOfPolygons = sc.nextInt();
             for (int c = 0; c < numberOfPolygons; c++) {
+                System.out.println("----------------------Poligno " + c +"----------------------");
                 polygonList.add(
                     new Poligno(
                         sc.nextDouble(),
@@ -96,6 +104,7 @@ public class Exec{
                         sc.nextDouble()
                     )
                 );
+                System.out.println("-----------------------------------------------------");
             }
             sc.close();
         } catch (Exception e) {

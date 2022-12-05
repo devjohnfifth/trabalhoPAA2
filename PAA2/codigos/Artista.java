@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 
 public class Artista extends JFrame {
     // Points: 0 1 2 3 0
-    private final int[] Y_POS = { 50, 50, 100, 100, 50 };
+    private final int[] Y_POS = { 50, 50, 100, 100 };
 
     private List<Poligno> polygonList;
     private String title;
@@ -98,9 +98,14 @@ public class Artista extends JFrame {
 
                 g.setColor(getRandomColor());
                 g.fillPolygon(xPos, Y_POS, 4);
-
+                System.out.println(
+                        "PosX0: [" + xPos[0] + "," + Y_POS[0] + "] PosX1: [" + xPos[1] + "," + Y_POS[1] + "] PosX2: ["
+                                + xPos[2] + "," + Y_POS[2] + "] PosX3: [" + xPos[3] + "," + Y_POS[3] + "] PosX4: ["
+                                + xPos[4] + "," + 0 + "]");
             }
+
             // lock = true;
         }
+        System.out.println("================================================================================================================");
     }
 }

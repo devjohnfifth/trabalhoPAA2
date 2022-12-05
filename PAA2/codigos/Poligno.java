@@ -20,14 +20,14 @@ public class Poligno {
             posicaoRelativa[1] = Math.abs(x3) + x1;
             posicaoRelativa[2] = x2 - x3;
             posicaoRelativa[3] = 0;
-            System.out.println("POSIÇÃO RELATIVA P1: "+ posicaoRelativa[0] + " P2: "+ posicaoRelativa[1] + " P3 :" + posicaoRelativa[2] + " P4: " +  posicaoRelativa[3]+"\n");
+            System.out.println("POSIÇÃO RELATIVA P1: ["+ posicaoRelativa[0] + "] P2: ["+ posicaoRelativa[1] + "] P3 : [" + posicaoRelativa[2] + "] P4: [" +  posicaoRelativa[3]+"]\n");
         } else {
             // System.out.println(" NÃO ENTRA IF X3 < 0 (X3>=0)");
             posicaoRelativa[0] = 0;
             posicaoRelativa[1] = x1;
             posicaoRelativa[2] = x2;
             posicaoRelativa[3] = x3;
-            System.out.println("POSIÇÃO RELATIVA P1: "+ posicaoRelativa[0] + " P2: "+ posicaoRelativa[1] + " P3 :" + posicaoRelativa[2] + " P4: " +  posicaoRelativa[3]+"\n");
+            System.out.println("POSIÇÃO RELATIVA P1: ["+ posicaoRelativa[0] + "] P2: ["+ posicaoRelativa[1] + "] P3 : [" + posicaoRelativa[2] + "] P4: [" +  posicaoRelativa[3]+"]\n");
         }
     }
     //================================================
